@@ -17,19 +17,25 @@
     <title>Adicionar</title>
 </head>
 <body>
-    <header style="padding: 15px">
-        <ul class="nav justify-content-end">
-            <li class="nav-item">
-                <a class="nav-link" href="add.php">Adicionar</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="listar.php" >Listar</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="sair.php" >Sair</a>
-            </li>
-        </ul>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="add.php">Adicionar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="listar.php" >Listar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sair.php" >Sair</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="container">
         <form action="insert.php" method="post">
             <div class="form-row">
