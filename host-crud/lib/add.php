@@ -18,7 +18,7 @@
 </head>
 <body>
     <header style="padding: 15px">
-        <ul class="nav justify-content-center">
+        <ul class="nav justify-content-end">
             <li class="nav-item">
                 <a class="nav-link" href="add.php">Adicionar</a>
             </li>
@@ -34,12 +34,12 @@
         <form action="insert.php" method="post">
             <div class="form-row">
                 <div class="col">
-                    <label for="nome">Name:</label>
-                    <input class="form-control" type="text" name="nome">
+                    <label for="nome">Nome:</label>
+                    <input class="form-control" type="text" name="nome" placeholder="www.seudominio.com">
                 </div>
                 <div class="col">
-                    <label for="endereco">Address:</label>
-                    <input class="form-control" type="text" name="endereco">
+                    <label for="endereco">Endereço:</label>
+                    <input class="form-control" type="text" name="endereco" placeholder="0.0.0.0">
                 </div>
             </div>
             <div class="form-row">

@@ -19,7 +19,7 @@
 </head>
 <body>
     <header style="padding: 15px">
-        <ul class="nav justify-content-center">
+        <ul class="nav justify-content-end">
             <li class="nav-item">
                 <a class="nav-link" href="add.php">Adicionar</a>
             </li>
