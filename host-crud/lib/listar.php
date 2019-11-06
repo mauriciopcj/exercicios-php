@@ -52,10 +52,22 @@
         </thead>
         <tbody>';
         foreach($read as $dns){
-            echo "<tr><td>".$dns['id']."</td><td>".$dns['name']."</td>
-                <td>".$dns['address']."</td>
-                <td><a href=''>Atualizar</a></td>
-                <td><a href='remove.php?id=".$dns['id']."'>Remover</a></td></tr>";
+            echo "<tr>
+    <td>".$dns['id']."</td>
+    <td>".$dns['name']."</td>
+    <td>".$dns['address']."</td>
+    <td><a href=''>Atualizar</a></td>
+    <td><a href='remove.php?id=".$dns['id']."'>Remover</a></td>
+</tr>
+<tr class='collapse' id='collapseExample'>
+    <form action='update.php' method='post'>
+        <td>".$dns['id']."</td>
+        <td><input class='form-control' type='text' name='nome' placeholder='".$dns['name']."'></td>
+        <td><input class='form-control' type='text' name='endereco' placeholder='".$dns['address']."'></td>
+        <td><button class='btn btn-primary' type='submit'>Atualizar</button></td>
+        <td></td>
+    </form>
+</tr>";
         }
         echo '</tbody></div>';
 
