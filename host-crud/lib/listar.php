@@ -40,9 +40,10 @@
     <?php
         $banco = new Database();
         $read = $banco->readAll();
-        echo '<div class="container"><table class="table">
+        echo '<div class="container"><form action="removeAll.php" method="post"><table class="table">
         <thead>
           <tr>
+            <th scope="col"></th>
             <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">Address</th>
@@ -53,23 +54,24 @@
         <tbody>';
         foreach($read as $dns){
             echo "<tr>
+    <td><input name=[] type='checkbox' value=".$dns['id']."></input></td>
     <td>".$dns['id']."</td>
     <td>".$dns['name']."</td>
     <td>".$dns['address']."</td>
-    <td><a href=''>Atualizar</a></td>
+    <td><a data-toggle='collapse' href='#collapse".$dns['id']."' role='button' aria-expanded='false' aria-controls='collapse".$dns['id']."'>Atualizar</a></td>
     <td><a href='remove.php?id=".$dns['id']."'>Remover</a></td>
 </tr>
-<tr class='collapse' id='collapseExample'>
+<tr class='collapse' id='collapse".$dns['id']."'>
     <form action='update.php' method='post'>
-        <td>".$dns['id']."</td>
-        <td><input class='form-control' type='text' name='nome' placeholder='".$dns['name']."'></td>
-        <td><input class='form-control' type='text' name='endereco' placeholder='".$dns['address']."'></td>
+        <td><input class='form-control' type='text' name='id' value='".$dns['id']."' readonly></td>
+        <td><input class='form-control' type='text' name='nome' value='".$dns['name']."'></td>
+        <td><input class='form-control' type='text' name='endereco' value='".$dns['address']."'></td>
         <td><button class='btn btn-primary' type='submit'>Atualizar</button></td>
         <td></td>
     </form>
 </tr>";
         }
-        echo '</tbody></div>';
+        echo '</form></table></tbody></div>';
 
     ?>
 

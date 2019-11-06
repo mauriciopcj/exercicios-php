@@ -1,7 +1,7 @@
 <?php
 
 const DB = 'mysql';
-const DBHOST = 'localhost';
+const DBHOST = 'mysql';
 const DBNAME = 'computer';
 const DBUSER = 'root';
-const DBPWD = '';
+const DBPWD = 'abc123';

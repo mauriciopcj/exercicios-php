@@ -93,5 +93,11 @@ class Database {
     }
   }
 
+  public function readByNameUser($name) {
+    $sql = "SELECT password FROM users WHERE name='${name}'";
+    $pdoStm = $this->connection->query($sql);
+    return $pdoStm ? $pdoStm->fetch(PDO::FETCH_ASSOC) : null;
+  }
+
 }
 
